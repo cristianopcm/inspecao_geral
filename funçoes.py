@@ -5,7 +5,8 @@ from datetime import date
 hoje = str(date.today())
 
 def cabeçalho(maquina, tipo_manutencao):
-    st.subheader(f"**{maquina}** - {tipo_manutencao} SMC: {maquina}{hoje.replace('-','')}")
+    st.subheader(f"**{maquina}** - {tipo_manutencao}")
+    st.write(f'SMC: {maquina}{hoje.replace('-','')}')
     st.divider()
 
 
@@ -35,5 +36,6 @@ def tecnicos(prefixo):
     t1 = col1.text_input('Técnico 1', key= f'{prefixo}_tec1')
     t2 = col2.text_input('Técnico 2', key= f'{prefixo}_tec2')
     t3 = col3.text_input('Técnico 3', key= f'{prefixo}_tec3')
+
 
 
